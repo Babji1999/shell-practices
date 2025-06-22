@@ -9,3 +9,6 @@ echo "home directory of user: $home"
 echo "PID of the script: $$"
 sleep 10 &
 echo "PID of last command in the background: $!"
+echo "current directory: $PWD"
+echo "home directory of user: $USER"
+echo "home directory of user: $HOME"
