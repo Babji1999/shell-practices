@@ -11,13 +11,12 @@ else
 fi
 
 
-dnf list installed ngnix
+dnf list installed mysql
 if [ $? -ne 0 ]
 then
-   echo "nignix is not installed"
+   echo "mysql is not installed"
 
-   dnf install nginx -y
-
+   dnf install mysql -y
    if [ $? -eq 0 ]
     then 
         echo "installing mysql is ----success"
@@ -27,5 +26,5 @@ then
     fi
 else
 
-   echo "nginx is already installed"
+   echo "mysql is already installed"
 fi
