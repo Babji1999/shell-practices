@@ -21,15 +21,12 @@ VALIDATE() {
 }
 
 dnf list installed ngnix
-if [ $? -ne 0 ]
-
-then
-   echo "nignix is not installed"
-
-   dnf install nginx -y
-
-   VALIDATE $? "nginx"
-else
+   if [ $? -ne 0 ]
+   then
+        echo "nignix is not installed"
+        dnf install nginx -y
+        VALIDATE $? "nginx"
+   else
 
    echo "nginx is already installed"
 fi
